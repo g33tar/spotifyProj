@@ -1,0 +1,19 @@
+<h1>GIF's are silly</h1>
+
+<a href="/logout">Logout</a>  |
+<a href="gifs/new">Add a GIF!</a>
+<div class="gif">
+  {{#each gifs}}
+  <article class="gifs">
+
+    <a href="/gifs/{{_id}}"><img src="{{url}}" alt="gif" /></a> <br>
+    {{author}} <br>
+    {{description}} <br>
+    {{#if safe}}
+      NSFW
+      {{else}}
+      Safe for work
+      {{/if}}
+    </article>
+  {{/each}}
+</div>

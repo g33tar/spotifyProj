@@ -1,0 +1,19 @@
+<h1>Edit Gif</h1>
+<a href="/logout">Logout</a>
+<a href="/gifs">Home Page</a>
+
+<form class="" action="/gifs/{{_id}}/update" method="post">  
+  <label for="url">Add a URL</label>
+    <input type="url" name="url" class="url" id="url" value="{{url}}">
+
+  <label for="author"></label>
+    <input type="text" name="author" id="author" value="{{author}}" >
+
+  <label for="safe">Safe for work?</label>
+    <input type="checkbox" name="safe" id='safe' value="">
+
+  <input type="submit" value="Add a URL" >
+</form>
+
+<img class='img'/>
+<script type="" src="/javascripts/client.js"></script>
