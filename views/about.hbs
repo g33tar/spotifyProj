@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    {{{body}}}
+    <header>
+      {{#if user}}
+        <p>
+          Hello {{display_name}}
+          |
+          <a href="/logout">Logout</a>
+        </p>
+      {{else}}
+        <p>
+          <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+        </p>
+      {{/if}}
+    <a href="/songs">Back</a>
+  </header>
+    <h1>Welcome to ! ! Beats</h1>
+    <p>
+      This app has many possibilities.  It allows you create a playlist based on the tempo of your choice.  Perfect for the:
+    </p>
+      <ul>
+        <li>runner wanting to have a consistent pace</li>
+        <li>the trainer who wants a tempo for their class</li>
+        <li>the dj who wants the beat to drop when they say so</li>
+      </ul>
+      <p>
+        The possibilities are endless.  Enjoy your time here.  There will be more features to come.
+      </p>
+  </body>
+</html>

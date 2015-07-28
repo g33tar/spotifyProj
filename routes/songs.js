@@ -1,53 +1,53 @@
 var express = require('express'),
   router = express.Router(),
   db = require('monk')(process.env.MONGOLAB_URI),
-  gifs = db.get('gifs')
+  songs = db.get('songs')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  gifs.find({}, function(err, docs){
+  songs.find({}, function(err, docs){
     if (err) throw err
-    res.render('gifs/index', {gifs: docs, email: req.session.email})
+    res.render('songs/index', {songs: docs, email: req.session.email})
     })
   })
 
 router.post('/', function(req, res, next) {
-  gifs.insert(req.body, function(err, doc){
+  songs.insert(req.body, function(err, doc){
     if (err) throw err
-    res.redirect('/gifs')
+    res.redirect('/songs')
   })
 })
 
 router.get('/new', function(req, res, next) {
-  res.render('gifs/new')
+  res.render('songs/new')
 })
 
 router.get('/:id', function(req, res, next) {
-  gifs.findOne({_id: req.params.id}, function(err, doc){
+  songs.findOne({_id: req.params.id}, function(err, doc){
     if (err) throw err
-    res.render('gifs/show', doc)
+    res.render('songs/show', doc)
   })
 })
 
 router.get('/:id/edit', function(req, res, next) {
-  gifs.findOne({_id: req.params.id}, function(err, doc){
+  songs.findOne({_id: req.params.id}, function(err, doc){
     if (err) throw err
-    res.render('gifs/edit', doc)
+    res.render('songs/edit', doc)
   })
 })
 
 router.post('/:id/update', function(req, res, next) {
   console.log(req.body)
-  gifs.update({_id: req.params.id}, req.body, function(err, doc){
+  songs.update({_id: req.params.id}, req.body, function(err, doc){
     if (err) throw err
-    res.redirect('/gifs/' + req.params.id)
+    res.redirect('/songs/' + req.params.id)
   })
 })
 
 router.post('/:id/delete', function(req, res, next) {
-  gifs.remove({_id: req.params.id}, function(err, doc){
+  songs.remove({_id: req.params.id}, function(err, doc){
     if (err) throw err
-    res.redirect('/gifs')
+    res.redirect('/songs')
   })
 })
 

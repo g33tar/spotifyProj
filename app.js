@@ -7,11 +7,19 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cookieSession = require('cookie-session');
-var routes = require('./routes/site');
-var gifs = require('./routes/gifs');
 var bcrypt = require('bcryptjs');
 var salt = bcrypt.genSaltSync(10);
 var hash = bcrypt.hashSync("B4c0/\/", salt);
+var SpotifyWebApi = require('spotify-web-api-node');
+
+var spotifyApi = new SpotifyWebApi({
+  clientId : process.env.SPOTIFY_CLIENT_ID,
+  clientSecret : process.env.SPOTIFY_CLIENT_SECRET,
+  redirectUri : process.env.HOST
+});
+
+var routes = require('./routes/site');
+var songs = require('./routes/songs');
 
 var app = express();
 
@@ -22,15 +30,14 @@ app.set('trust proxy', 1) // trust first proxy
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev')); //logger middleware generates a detailed log.
-app.use(bodyParser.json());   // returns middleware that only parses json
+app.use(logger('dev'));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());  //responsible for taking incoming cookie header and presenting that to you in a useful property of the request object
-app.use(cookieSession({ name: 'session',keys: [process.env.key1, process.env.key2]})) //view counter, handles using a cookie to create a nice session variable
-app.use(express.static(path.join(__dirname, 'public'))); //accessing our public route
-
+app.use(cookieParser());
+app.use(cookieSession({ name: 'session',keys: [process.env.key1, process.env.key2]}))
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
-app.use('/gifs', gifs);
+app.use('/songs', songs);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

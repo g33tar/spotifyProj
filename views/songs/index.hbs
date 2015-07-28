@@ -1,12 +1,13 @@
-<h1>GIF's are silly</h1>
+<h1>Build a Playlist</h1>
 
 <a href="/logout">Logout</a>  |
-<a href="gifs/new">Add a GIF!</a>
-<div class="gif">
-  {{#each gifs}}
-  <article class="gifs">
+<a href="/about">About</a>  |
+<a href="songs/new">Search for Artists!</a>
+<div class="songs">
+  {{#each songs}}
+  <article class="songs">
 
-    <a href="/gifs/{{_id}}"><img src="{{url}}" alt="gif" /></a> <br>
+    <a href="/songs/{{_id}}"><img src="{{url}}" alt="songs" /></a> <br>
     {{author}} <br>
     {{description}} <br>
     {{#if safe}}

@@ -6,10 +6,11 @@ var express = require('express'),
     users = db.get('users'),
     bcrypt = require('bcryptjs')
 
-/* GET login page. */
+/* GET landing page. */
 router.get('/', function(req, res, next) {
   res.render('login', { title: 'Express'});
 });
+
 /* GET login page. */
 router.get('/login', function(req, res, next) {
   res.render('login', { title: 'Express'});
@@ -32,7 +33,7 @@ router.post('/login', function(req, res) {
       if (doc) {
         if (bcrypt.compareSync(req.body.password, doc.password)) {
           req.session.id = doc._id;
-          res.redirect('/gifs')
+          res.redirect('/songs')
         }
         else {
           loginErrors.push('Incorrect email and password combo')
@@ -72,7 +73,7 @@ router.post('/register', function(req, res) {
       users.insert(req.body, function(err, doc){
         if (err) return err
           req.session.id = doc._id
-          res.redirect('/gifs')
+          res.redirect('/songs')
         })
       } else {
           errors.push('Login invalid')
@@ -81,6 +82,11 @@ router.post('/register', function(req, res) {
       })
     }
 })
+//about
+router.get('/about', function(req, res, next) {
+  res.render('about');
+});
+
 
 //logout route
 router.get('/logout', function(req, res){
