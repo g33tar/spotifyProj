@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('markdown-table-processor:server');
+var debug = require('debug')('spotifyProj:server');
 var http = require('http');
 
 /**
