@@ -10,6 +10,8 @@ var cookieSession = require('cookie-session');
 var bcrypt = require('bcryptjs');
 var salt = bcrypt.genSaltSync(10);
 var hash = bcrypt.hashSync("B4c0/\/", salt);
+// var db = require('monk')(process.env.MONGOLAB_URI);
+// var songs = db.get('songs');
 
 var routes = require('./routes/site');
 var songs = require('./routes/songs');
@@ -29,6 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cookieSession({ name: 'session',keys: [process.env.key1, process.env.key2]}))
 app.use(express.static(path.join(__dirname, 'public')));
+// app.locals.songs = songs
 app.use('/', routes);
 app.use('/songs', songs);
 

@@ -5,8 +5,20 @@
 <a href="songs/new">Search for Artists!</a>
 <br>
 <br>
+
+
+<aside class="">
+  {{#songs}}
+  <form action="/songs/{{_id}}/delete" method ="POST">
+    {{query}}
+    <input class='indBut' type="submit" value = 'X' >
+  </form>
+  {{/songs}}
+</aside>
+
+
 <div class="songs">
-  {{#each artists.items}}
+  {{#each data.artists.items}}
       <img src="{{images.1.url}}" alt="" />
   {{/each}}
 </div>
