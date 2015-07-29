@@ -3,18 +3,10 @@
 <a href="/logout">Logout</a>  |
 <a href="/about">About</a>  |
 <a href="songs/new">Search for Artists!</a>
+<br>
+<br>
 <div class="songs">
-  {{#each songs}}
-  <article class="songs">
-
-    <a href="/songs/{{_id}}"><img src="{{url}}" alt="songs" /></a> <br>
-    {{author}} <br>
-    {{description}} <br>
-    {{#if safe}}
-      NSFW
-      {{else}}
-      Safe for work
-      {{/if}}
-    </article>
+  {{#each artists.items}}
+      <img src="{{images.1.url}}" alt="" />
   {{/each}}
 </div>

@@ -10,13 +10,6 @@ var cookieSession = require('cookie-session');
 var bcrypt = require('bcryptjs');
 var salt = bcrypt.genSaltSync(10);
 var hash = bcrypt.hashSync("B4c0/\/", salt);
-var SpotifyWebApi = require('spotify-web-api-node');
-
-var spotifyApi = new SpotifyWebApi({
-  clientId : process.env.SPOTIFY_CLIENT_ID,
-  clientSecret : process.env.SPOTIFY_CLIENT_SECRET,
-  redirectUri : process.env.HOST
-});
 
 var routes = require('./routes/site');
 var songs = require('./routes/songs');
