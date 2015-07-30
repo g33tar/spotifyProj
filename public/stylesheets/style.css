@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url(http://fonts.googleapis.com/css?family=Cinzel+Decorative);
+@import url(https://fonts.googleapis.com/css?family=Cinzel+Decorative);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -32,9 +32,7 @@ body {
   line-height: 1; }
 
 ol, ul {
-  list-style: none;
-  margin-left: 40px;
-  margin-bottom: 20px; }
+  list-style: none; }
 
 blockquote, q {
   quotes: none; }
