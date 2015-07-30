@@ -1,7 +1,18 @@
 html {
-  background: url(/public/images/bwbooks.jpg) no-repeat center center fixed;
+  background: url(/images/Ddbridg014.JPG) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.cover {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    background-size: cover;
+    margin: 10px;
 }

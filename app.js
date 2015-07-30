@@ -34,6 +34,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.locals.songs = songs
 app.use('/', routes);
 app.use('/songs', songs);
+app.get('/styleguide', function(req, res){
+  res.render('styleguide');
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

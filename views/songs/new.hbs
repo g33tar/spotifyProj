@@ -1,9 +1,12 @@
 <div class="container">
-    <h1>Search for an Artist</h1>
-    <a href="/logout">Logout</a>    |
-    <a href="/songs">Home Page</a>
-
-    <p>Type an artist name and click on "Search".</p>
+  <header class="main-header">
+    <nav class="main-nav">
+      <a href="/logout" class="links">Logout </a>
+      <a href="songs/new" class="links">Search for Artists!</a>
+    <h3>Find Images of your Favorite Artists</h3>
+    </nav>
+  </header>
+    <p class="new">Type an artist name and click on "Search".</p>
     <form class="" action="/songs" method="post" id="search-form">
       <input type="text" name = 'query' id="query" value="" class="form-control" placeholder="Type an Artist Name"/>
       <input type="submit" id="search" class="btn btn-primary" value="Search"/>

@@ -1,0 +1,53 @@
+form {
+  width: 30%;
+}
+
+textarea, input[type='text'] {
+  width: 100%;
+  border: 1px solid $red;
+  transition: 300ms ease all;
+  outline: none;
+  padding: 20px;
+  margin: 20px;
+  background: none;
+  color: $ltGr;
+  font-size: 20px;
+}
+.new{
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  font-size: 18px;
+  color: $ltGr;
+}
+
+textarea {
+  min-height: 250px;
+}
+
+label {
+  font-weight: bold;
+}
+
+textarea, input[type='email']{
+  width: 100%;
+  border: 1px solid $red;
+  transition: 300ms ease all;
+  outline: none;
+  padding: 20px;
+  margin: 20px;
+  background: none;
+  color: $ltGr;
+  font-size: 20px;
+}
+textarea, input[type='password']{
+  width: 100%;
+  border: 1px solid $red;
+  transition: 300ms ease all;
+  outline: none;
+  padding: 20px;
+  margin: 20px;
+  background: none;
+  color: $ltGr;
+  font-size: 20px;
+}

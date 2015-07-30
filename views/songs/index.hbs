@@ -1,17 +1,19 @@
-<h1>Build a Playlist</h1>
+<body>
+<header class="main-header">
+  <nav class="main-nav">
+    <a href="/logout" class="links">Logout </a>
+    <a href="/about" class="links">About </a>
+    <a href="songs/new" class="links">Search for Artists!</a>
+  <h3>Find Images of your Favorite Artists</h3>
+  </nav>
+</header>
 
-<a href="/logout">Logout</a>  |
-<a href="/about">About</a>  |
-<a href="songs/new">Search for Artists!</a>
-<br>
-<br>
-
-
-<aside class="">
+<aside class="aside">
+  <h3>Search History</h3>
   {{#songs}}
   <form action="/songs/{{_id}}/delete" method ="POST">
     {{query}}
-    <input class='indBut' type="submit" value = 'X' >
+    <input class='delete`' type="submit" value = 'X' >
   </form>
   {{/songs}}
 </aside>
@@ -19,6 +21,7 @@
 
 <div class="songs">
   {{#each data.artists.items}}
-      <img src="{{images.1.url}}" alt="" />
+      <img class="cover" src="{{images.1.url}}" alt="" />
   {{/each}}
 </div>
+</body>
