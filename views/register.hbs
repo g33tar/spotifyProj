@@ -9,15 +9,12 @@
   <nav class="main-nav">
     <a href="/about" class="links">About </a>
   </nav>
-  <h1>Create a user account here!</h1>
+  <h2>Create a user account here!</h2>
 
   <form action="/register" method="POST">
-    <label for="email">Email</label>
-    <input id="email" type="email" name="email" value="">
+    <input id="email" type="email" name="email" value="" placeholder="Email Address"> <br>
 
-    <label for="password">Password</label>
-    <input id="password" type="password" name="password">
-    <br>
+    <input id="password" type="password" name="password" placeholder="Password">
     <br>
     {{#if errors}}
       <p>{{errors}}</p>

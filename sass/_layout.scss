@@ -1,7 +1,9 @@
 
 .aside{
   float:right;
-  text-align: justify;
+  max-width: 15%;
+  text-align: inherit;
   border-left: 2px solid $dkGr;
-  padding-left: 10px;
+  padding-left: 20px;
+
 }

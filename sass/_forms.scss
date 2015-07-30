@@ -1,9 +1,9 @@
 form {
-  width: 30%;
+  width: 80%;
 }
 
 textarea, input[type='text'] {
-  width: 100%;
+  width: 30%;
   border: 1px solid $red;
   transition: 300ms ease all;
   outline: none;
@@ -30,7 +30,7 @@ label {
 }
 
 textarea, input[type='email']{
-  width: 100%;
+  width: 40%;
   border: 1px solid $red;
   transition: 300ms ease all;
   outline: none;
@@ -41,7 +41,7 @@ textarea, input[type='email']{
   font-size: 20px;
 }
 textarea, input[type='password']{
-  width: 100%;
+  width: 40%;
   border: 1px solid $red;
   transition: 300ms ease all;
   outline: none;

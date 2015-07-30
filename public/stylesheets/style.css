@@ -64,9 +64,10 @@ html {
 
 .aside {
   float: right;
-  text-align: justify;
+  max-width: 15%;
+  text-align: inherit;
   border-left: 2px solid #1C1D21;
-  padding-left: 10px; }
+  padding-left: 20px; }
 
 html {
   font-size: 1em; }
@@ -154,10 +155,10 @@ a:hover {
   border-bottom: 1px solid #1C1D21; }
 
 form {
-  width: 30%; }
+  width: 80%; }
 
 textarea, input[type='text'] {
-  width: 100%;
+  width: 30%;
   border: 1px solid #960000;
   transition: 300ms ease all;
   outline: none;
@@ -181,7 +182,7 @@ label {
   font-weight: bold; }
 
 textarea, input[type='email'] {
-  width: 100%;
+  width: 40%;
   border: 1px solid #960000;
   transition: 300ms ease all;
   outline: none;
@@ -192,7 +193,7 @@ textarea, input[type='email'] {
   font-size: 20px; }
 
 textarea, input[type='password'] {
-  width: 100%;
+  width: 40%;
   border: 1px solid #960000;
   transition: 300ms ease all;
   outline: none;
@@ -211,11 +212,11 @@ input[type='submit'], button {
   font-size: 15px;
   margin-left: 20px; }
 
-.x {
+input[type='submit'], button, .x {
   border: 1px solid #960000;
   color: #960000;
-  border-radius: 10px;
-  padding: 5px;
+  border-radius: 50px;
+  padding: 2px 5px 2px 5px;
   background: #696D7D; }
 
 html {

@@ -5,12 +5,8 @@
 <h2>Please Login</h2>
 
 <form action="/login" method="post">
-  <label for="email">Email</label>
-    <input type="email" name="email" id ="email" value=""> <br>
-
-  <label for="password">Password</label>
-    <input type="password" name="password" id="password" value=""> <br>
-<br>
+    <input type="email" name="email" id ="email" value="" placeholder="Email Address"> <br>
+    <input type="password" name="password" id="password" value=""placeholder="Password"> <br>
 <br>
 {{#if loginErrors}}
   <p>{{loginErrors}}</p>
