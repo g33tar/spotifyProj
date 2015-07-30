@@ -1,9 +1,8 @@
 <body>
 <header class="main-header">
   <nav class="main-nav">
-    <a href="songs/new" class="links">Search for Artists!</a>|
-    <a href="/about" class="links"> About</a>|
-    <a href="/logout" class="links"> Logout</a>
+    <a href="songs/new" class="links">Search for Artists!</a>
+    |<a href="/logout" class="links"> Logout</a>
   </nav>
   <h3>Find Images of your Favorite Artists</h3>
 </header>
@@ -21,7 +20,7 @@
 
 <div class="songs">
   {{#each data.artists.items}}
-      <img class="cover" src="{{images.1.url}}" alt="" />
+      <img class="cover" src="{{images.0.url}}" alt="" />
   {{/each}}
 </div>
 </body>
