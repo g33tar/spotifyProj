@@ -10,14 +10,15 @@ textarea, input[type='text'] {
   padding: 20px;
   margin: 20px;
   background: none;
-  color: $ltGr;
+  color: $whte;
   font-size: 20px;
+  font-family: 'Cinzel Decorative', serif;
 }
 .new{
   margin-left: 20px;
   margin-top: 30px;
   margin-bottom: 0px;
-  font-size: 18px;
+  font-size: 15px;
   color: $ltGr;
 }
 
@@ -37,7 +38,8 @@ textarea, input[type='email']{
   padding: 20px;
   margin: 20px;
   background: none;
-  color: $ltGr;
+  color: $whte;
+  font-family: 'Cinzel Decorative', serif;
   font-size: 20px;
 }
 textarea, input[type='password']{
@@ -48,6 +50,7 @@ textarea, input[type='password']{
   padding: 20px;
   margin: 20px;
   background: none;
-  color: $ltGr;
+  color: $whte;
+  font-family: 'Cinzel Decorative', serif;
   font-size: 20px;
 }
